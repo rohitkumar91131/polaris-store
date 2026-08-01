@@ -10,9 +10,14 @@ export default function IndustrySection() {
         {industries.map((industry) => (
           <a href={industry.link} key={industry.id} className="block h-72 bg-gray-900 rounded-2xl relative overflow-hidden flex items-end p-8 group cursor-pointer shadow-md hover:shadow-2xl transition-shadow">
             <img src={industry.image} alt={industry.name} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500" />
+            
             <div className="relative z-10 w-full flex justify-between items-end">
               <h3 className="text-white text-3xl font-bold drop-shadow-md">{industry.name}</h3>
-              <span className="bg-accent text-white px-6 py-2 rounded-full font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">Shop Now</span>
+              
+              {/* FIX: Made always visible on mobile, hover effect applied only on md and larger screens */}
+              <span className="bg-accent text-white px-6 py-2 rounded-full font-semibold opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300 shadow-md md:shadow-none">
+                Shop Now
+              </span>
             </div>
           </a>
         ))}
