@@ -23,35 +23,44 @@ export default function IndustrySection() {
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
 
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10"></div>
+            {/* Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
 
             {/* Content */}
-            <div className="relative z-10 flex h-full flex-col justify-end p-6 md:p-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                {industry.name}
-              </h3>
+            <div className="relative z-10 flex h-full items-end p-6 md:p-8">
+              <div className="w-full flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                {/* Industry Name */}
+                <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                  {industry.name}
+                </h3>
 
-              {/* Button */}
-              <div className="mt-5 flex justify-start md:justify-end">
+                {/* CTA Button */}
                 <span
                   className="
-                    inline-flex items-center gap-3
+                    inline-flex
+                    w-fit
+                    items-center
+                    gap-3
                     rounded-full
-                    border border-white/25
+                    border
+                    border-white/20
                     bg-white/15
                     backdrop-blur-md
-                    px-5 py-3
-                    text-white
+                    px-5
+                    py-3
+                    text-sm
+                    md:text-base
                     font-semibold
+                    text-white
                     shadow-xl
                     transition-all
                     duration-300
-                    group-hover:bg-white/20
+                    group-hover:bg-white/25
                     group-hover:scale-105
                   "
                 >
                   <span>Shop Now</span>
+
                   <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
