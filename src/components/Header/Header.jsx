@@ -3,10 +3,17 @@ import { FiSearch, FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
 export default function Header() {
   return (
     <header className="px-4 md:px-8 py-6 flex items-center justify-between bg-white sticky top-0 z-40 shadow-sm">
-      <div className="text-2xl font-bold tracking-tighter text-primary">
-        POLARIS<span className="text-accent">.</span>
-      </div>
       
+      {/* Logo Section */}
+      <a href="/" className="flex-shrink-0 cursor-pointer">
+        <img 
+          src="/assets/images/logo.png" 
+          alt="Polaris Global Store Logo" 
+          className="h-8 md:h-10 object-contain"
+        />
+      </a>
+      
+      {/* Search Bar */}
       <div className="hidden md:flex flex-1 max-w-xl mx-8 relative">
         <input 
           type="text" 
@@ -16,6 +23,7 @@ export default function Header() {
         <FiSearch className="absolute right-4 top-3 text-gray-400" />
       </div>
 
+      {/* Icons */}
       <div className="flex items-center gap-4 md:gap-6 text-gray-700">
         <button className="hover:text-accent transition-colors"><FiHeart className="w-6 h-6" /></button>
         <button className="hover:text-accent transition-colors"><FiUser className="w-6 h-6" /></button>
@@ -24,6 +32,7 @@ export default function Header() {
           <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
         </button>
       </div>
+      
     </header>
   );
 }
