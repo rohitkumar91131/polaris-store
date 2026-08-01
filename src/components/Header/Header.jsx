@@ -7,7 +7,7 @@ export default function Header() {
       {/* Logo Section */}
       <a href="/" className="flex-shrink-0 cursor-pointer">
         <img 
-          src="/assets/images/logo.png" 
+          src="assets/images/logo.png" 
           alt="Polaris Global Store Logo" 
           className="h-8 md:h-10 object-contain"
         />
