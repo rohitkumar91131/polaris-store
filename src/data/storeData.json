@@ -73,7 +73,7 @@
       "id": 1, 
       "name": "Construction", 
       "link": "/industry/construction",
-      "image": "https://images.unsplash.com/photo-1508344928928-7157b87de541?w=800&q=80" 
+      "image": "https://media.gettyimages.com/id/1042342584/photo/investors-and-contractors-on-construction-site.jpg?s=612x612&w=0&k=20&c=dfpqU0nr9BccCHOdHNyI1UanHGLt1nD2t6jZp95YUe4=" 
     },
     { 
       "id": 2, 
@@ -87,7 +87,7 @@
     "description": "Upgrade your workspace with our premium selected bundles. Save up to 30% when you buy the complete set.",
     "buttonText": "Explore Bundles",
     "buttonLink": "/bundles",
-    "image": "https://images.unsplash.com/photo-1504307651254-35680f356fce?w=1200&q=80"
+    "image": "https://media.gettyimages.com/id/1394287688/photo/carpenter-shopping-in-hardware-store.jpg?s=612x612&w=0&k=20&c=2REACyiwXzjiTOe3J_rg4Ek6DHhq6f-bLvMnWkvHfeA="
   },
   "featuredProducts": [
     { "id": 1, "name": "Premium Leather Work Gloves", "price": 45.99, "image": "https://images.unsplash.com/photo-1634852836003-c0aa5b67d243?w=500&q=80", "description": "Durable and comfortable high-grade leather gloves for heavy lifting.", "rating": 4.8, "badge": "Popular", "variants": ["S", "M", "L"] },
