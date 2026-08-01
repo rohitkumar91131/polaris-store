@@ -11,7 +11,7 @@ export default function Header() {
       
       {/* Mobile Menu & Logo Section */}
       <div className="flex items-center gap-4">
-        {/* Hamburger Menu - Visible only on mobile, left of the logo */}
+        {/* Hamburger Menu - Visible only on mobile */}
         <button 
           className="md:hidden text-gray-800 hover:text-accent transition-colors p-1" 
           onClick={() => dispatch(toggleMobileMenu())}
@@ -22,13 +22,13 @@ export default function Header() {
         <a href="/" className="flex-shrink-0 cursor-pointer">
           <img 
             src="/assets/images/logo.webp" 
-            alt="Polaris Global Store Logo" 
+            alt="Store Logo" 
             className="h-8 md:h-10 object-contain"
           />
         </a>
       </div>
       
-      {/* Search Bar */}
+      {/* Search Bar - Hidden on mobile, visible on medium+ */}
       <div className="hidden md:flex flex-1 max-w-xl mx-8 relative">
         <input 
           type="text" 
@@ -40,17 +40,19 @@ export default function Header() {
 
       {/* Dynamic Data-Driven Icons */}
       <div className="flex items-center gap-4 md:gap-6 text-gray-700">
+        {/* Heart Icon - Hidden on mobile, visible on small+ */}
         <a href={headerLinks.wishlist} className="hover:text-accent transition-colors hidden sm:block">
           <FiHeart className="w-6 h-6" />
         </a>
+        
+        {/* User Icon - Hidden on mobile, visible on small+ */}
         <a href={headerLinks.profile} className="hover:text-accent transition-colors hidden sm:block">
           <FiUser className="w-6 h-6" />
         </a>
-        <a href={headerLinks.cart} className="hover:text-accent transition-colors relative block">
+
+        {/* Cart Icon - ADDED THIS. Visible on ALL screen sizes */}
+        <a href={headerLinks.cart} className="hover:text-accent transition-colors block">
           <FiShoppingCart className="w-6 h-6" />
-          <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
-            3
-          </span>
         </a>
       </div>
       
