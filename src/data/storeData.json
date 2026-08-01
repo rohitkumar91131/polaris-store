@@ -1,0 +1,20 @@
+{
+  "featuredProducts": [
+    { "id": 1, "name": "Premium Leather Work Gloves", "price": 45.99, "image": "https://images.unsplash.com/photo-1634852836003-c0aa5b67d243", "description": "Durable and comfortable.", "rating": 4.8, "badge": "Popular", "variants": ["S", "M", "L"] },
+    { "id": 2, "name": "Industrial Safety Helmet", "price": 89.50, "image": "https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc", "description": "High-impact resistance.", "rating": 4.9, "badge": "", "variants": ["Yellow", "White"] },
+    { "id": 3, "name": "Heavy Duty Tool Belt", "price": 65.00, "image": "https://images.unsplash.com/photo-1765518440022-10242cc86895", "description": "12 pockets.", "rating": 4.7, "badge": "Sale", "variants": ["One Size"] },
+    { "id": 4, "name": "Steel Toe Work Boots", "price": 120.00, "image": "https://images.unsplash.com/photo-1509099074304-74309ab2af3d", "description": "All-day comfort.", "rating": 5.0, "badge": "", "variants": ["9", "10", "11", "12"] }
+  ],
+  "newArrivals": [
+    { "id": 5, "name": "High-Visibility Vest", "price": 25.00, "image": "https://images.unsplash.com/photo-1762511879587-f15dcfba4351", "description": "Reflective stripes.", "rating": 4.5, "badge": "New", "variants": ["M", "L", "XL"] },
+    { "id": 6, "name": "Protective Eyewear", "price": 18.99, "image": "https://images.unsplash.com/photo-1708799366365-a24608103bed", "description": "Anti-fog lenses.", "rating": 4.6, "badge": "New", "variants": ["Clear", "Tinted"] },
+    { "id": 7, "name": "Cordless Power Drill", "price": 199.99, "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407", "description": "20V max lithium-ion.", "rating": 4.9, "badge": "New", "variants": ["Base Kit"] },
+    { "id": 8, "name": "Industrial Ear Muffs", "price": 32.00, "image": "https://images.unsplash.com/photo-1677019758448-4c34a78df2c3", "description": "Noise cancellation.", "rating": 4.7, "badge": "New", "variants": ["Black"] }
+  ],
+  "bestSellers": [
+    { "id": 9, "name": "Measuring Tape Pro", "price": 15.50, "image": "https://images.unsplash.com/photo-1689446802635-6c61ad0cc1d0", "description": "25ft heavy duty.", "rating": 4.8, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 10, "name": "Multi-bit Screwdriver", "price": 22.00, "image": "https://images.unsplash.com/photo-1581621293775-7aac902d7032", "description": "11-in-1 tool.", "rating": 4.9, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 11, "name": "Utility Knife", "price": 12.99, "image": "https://images.unsplash.com/photo-1713114344703-bf4fb0be30bd", "description": "Retractable blade.", "rating": 4.6, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 12, "name": "Canvas Tool Bag", "price": 45.00, "image": "https://images.unsplash.com/photo-1528976915572-6a0cf746802e", "description": "Water-resistant.", "rating": 4.8, "badge": "Best Seller", "variants": ["Khaki", "Black"] }
+  ]
+}
