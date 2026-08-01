@@ -1,41 +1,135 @@
-import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { useState, useRef } from "react";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import storeData from "../../data/storeData.json";
+
+// Register GSAP plugin
+gsap.registerPlugin(useGSAP);
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const links = ["Shop All", "Tools", "Safety Gear", "Apparel", "Brands", "Clearance"];
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  
+  const mobileMenuRef = useRef();
+
+  // 1. Mobile Menu Slide & Stagger Animation (Only runs on open/close)
+  useGSAP(() => {
+    if (isOpen) {
+      gsap.to(mobileMenuRef.current, {
+        x: 0,
+        duration: 0.4,
+        ease: "power3.out"
+      });
+      gsap.fromTo(".mobile-link", 
+        { x: -20, opacity: 0 }, 
+        { x: 0, opacity: 1, duration: 0.3, stagger: 0.05, ease: "power2.out", delay: 0.1 }
+      );
+    } else {
+      gsap.to(mobileMenuRef.current, {
+        x: "-100%",
+        duration: 0.3,
+        ease: "power3.in"
+      });
+    }
+  }, [isOpen]);
+
+  // 2. Desktop Dropdown Hover Animation (Only runs on hover)
+  const handleMouseEnter = (id) => {
+    setActiveDropdown(id);
+    // Add a tiny delay so React has time to mount the dropdown into the DOM before animating
+    setTimeout(() => {
+      gsap.fromTo(`.dropdown-${id}`, 
+        { opacity: 0, y: 15 }, 
+        { opacity: 1, y: 0, duration: 0.25, ease: "power2.out", overwrite: true }
+      );
+    }, 10);
+  };
 
   return (
-    <nav className="bg-primary text-white relative">
-      <div className="px-4 md:px-8 py-3 flex items-center justify-between">
-        <div className="hidden md:flex gap-8 font-medium text-sm tracking-wide">
-          {links.map((link) => (
-            <div key={link} className="group relative cursor-pointer hover:text-accent transition-colors">
-              {link}
-              {/* Dropdown placeholder */}
-              <div className="absolute top-full left-0 mt-3 w-48 bg-white text-gray-800 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-md py-2">
-                <div className="px-4 py-2 hover:bg-gray-50 hover:text-accent">Subcategory 1</div>
-                <div className="px-4 py-2 hover:bg-gray-50 hover:text-accent">Subcategory 2</div>
+    <>
+      <nav className="bg-primary text-white relative z-50 shadow-md border-t border-gray-800">
+        <div className="px-4 md:px-8 py-2 flex items-center justify-between md:justify-center relative z-50">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex gap-10 font-medium text-[15px] tracking-wide items-center">
+            {storeData.navbar.map((item) => (
+              <div 
+                key={item.id} 
+                className="group relative py-3 cursor-pointer"
+                onMouseEnter={() => handleMouseEnter(item.id)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <a href={item.link} className="flex items-center gap-1.5 hover:text-accent transition-colors duration-300">
+                  {item.title}
+                  {item.subitems.length > 0 && (
+                    <FiChevronDown className={`mt-0.5 transition-transform duration-300 ${activeDropdown === item.id ? "rotate-180 text-accent" : ""}`} />
+                  )}
+                </a>
+                
+                {/* Desktop Hover Dropdown */}
+                {item.subitems.length > 0 && activeDropdown === item.id && (
+                  <div className={`dropdown-${item.id} absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-white text-gray-800 shadow-2xl rounded-xl py-3 border-t-4 border-accent overflow-hidden`}>
+                    {item.subitems.map((sub, idx) => (
+                      <a key={idx} href={sub.link} className="block px-5 py-2.5 text-sm font-medium hover:bg-gray-50 hover:text-accent transition-colors border-b border-gray-50 last:border-0">
+                        {sub.title}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          {/* Mobile Hamburger Button */}
+          <button className="md:hidden text-white ml-auto" onClick={() => setIsOpen(true)}>
+            <FiMenu className="w-7 h-7 hover:text-accent transition-colors" />
+          </button>
+        </div>
+      </nav>
+
+      {/* Desktop Dark Backdrop Blur Overlay */}
+      {activeDropdown && storeData.navbar.find(i => i.id === activeDropdown)?.subitems.length > 0 && (
+        <div className="hidden md:block fixed inset-0 bg-primary/20 backdrop-blur-sm z-40 transition-opacity duration-300 pointer-events-none" />
+      )}
+
+      {/* Mobile Dark Overlay */}
+      <div 
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`} 
+        onClick={() => setIsOpen(false)} 
+      />
+      
+      {/* Mobile Slide-out Drawer */}
+      <div 
+        ref={mobileMenuRef}
+        className="fixed top-0 left-0 h-full w-[80%] max-w-sm bg-white z-50 shadow-2xl md:hidden overflow-y-auto -translate-x-full"
+      >
+        <div className="p-5 border-b flex justify-between items-center bg-primary text-white">
+          <span className="font-bold text-xl tracking-tighter">POLARIS<span className="text-accent">.</span></span>
+          <button onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">
+            <FiX className="w-7 h-7" />
+          </button>
         </div>
         
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-primary z-50 border-t border-gray-700">
-          {links.map((link) => (
-            <div key={link} className="px-4 py-3 border-b border-gray-700 hover:bg-gray-800">
-              {link}
+        <div className="flex flex-col py-2">
+          {storeData.navbar.map((item) => (
+            <div key={item.id} className="mobile-link border-b border-gray-100 last:border-0">
+              <a href={item.link} className="block px-6 py-4 font-bold text-gray-800 text-lg hover:text-accent transition-colors">
+                {item.title}
+              </a>
+              {item.subitems.length > 0 && (
+                <div className="bg-gray-50/50 px-6 pb-5 flex flex-col gap-4">
+                  {item.subitems.map((sub, idx) => (
+                    <a key={idx} href={sub.link} className="text-gray-600 text-[15px] font-medium hover:text-accent flex items-center gap-3 transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/50"></span> {sub.title}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 }

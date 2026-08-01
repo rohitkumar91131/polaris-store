@@ -11,41 +11,56 @@
       "title": "Tools",
       "link": "/tools",
       "subitems": [
-        { "title": "Power Tools", "link": "/tools/power" },
-        { "title": "Hand Tools", "link": "/tools/hand" },
-        { "title": "Tool Storage", "link": "/tools/storage" }
+        { "title": "Cordless Power Tools", "link": "/tools/cordless" },
+        { "title": "Precision Hand Tools", "link": "/tools/hand" },
+        { "title": "Pneumatic & Air Tools", "link": "/tools/pneumatic" },
+        { "title": "Welding & Soldering", "link": "/tools/welding" },
+        { "title": "Heavy-Duty Storage", "link": "/tools/storage" }
       ]
     },
     {
       "id": 3,
-      "title": "Safety Gear",
+      "title": "Safety & PPE",
       "link": "/safety",
       "subitems": [
-        { "title": "Helmets & Hard Hats", "link": "/safety/helmets" },
-        { "title": "Protective Eyewear", "link": "/safety/eyewear" },
-        { "title": "Work Gloves", "link": "/safety/gloves" }
+        { "title": "Head & Face Protection", "link": "/safety/head" },
+        { "title": "High-Impact Eyewear", "link": "/safety/eyewear" },
+        { "title": "Tactical & Cut-Resistant Gloves", "link": "/safety/gloves" },
+        { "title": "Respiratory Safety", "link": "/safety/respiratory" },
+        { "title": "Fall Protection Harnesses", "link": "/safety/fall-protection" }
       ]
     },
     {
       "id": 4,
-      "title": "Apparel",
+      "title": "Workwear",
       "link": "/apparel",
       "subitems": [
-        { "title": "Work Boots", "link": "/apparel/boots" },
-        { "title": "High-Visibility", "link": "/apparel/hi-vis" }
+        { "title": "Industrial Steel-Toe Footwear", "link": "/apparel/boots" },
+        { "title": "Flame-Resistant (FR) Clothing", "link": "/apparel/fr-clothing" },
+        { "title": "High-Visibility Outerwear", "link": "/apparel/hi-vis" },
+        { "title": "Weather-Proof Jackets", "link": "/apparel/jackets" }
       ]
     },
     {
       "id": 5,
-      "title": "Brands",
+      "title": "Top Brands",
       "link": "/brands",
-      "subitems": []
+      "subitems": [
+        { "title": "Milwaukee", "link": "/brands/milwaukee" },
+        { "title": "DeWalt", "link": "/brands/dewalt" },
+        { "title": "Makita", "link": "/brands/makita" },
+        { "title": "3M Safety", "link": "/brands/3m" }
+      ]
     },
     {
       "id": 6,
       "title": "Clearance",
       "link": "/clearance",
-      "subitems": []
+      "subitems": [
+        { "title": "End of Season Sale", "link": "/clearance/season-sale" },
+        { "title": "Refurbished Equipment", "link": "/clearance/refurbished" },
+        { "title": "Bulk Discount Offers", "link": "/clearance/bulk" }
+      ]
     }
   ],
   "categories": [
