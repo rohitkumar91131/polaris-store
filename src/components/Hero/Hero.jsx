@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useSelector } from "react-redux";
@@ -13,10 +13,14 @@ export default function Hero() {
   const textRef = useRef(null);
   const buttonRef = useRef(null);
 
+  const [loaded, setLoaded] = useState(false);
+
   const heroData = useSelector((state) => state.data.hero);
 
   useGSAP(
     () => {
+      if (!loaded) return;
+
       const tl = gsap.timeline({
         defaults: {
           ease: "power3.out",
@@ -25,11 +29,11 @@ export default function Hero() {
 
       // Initial state
       gsap.set(bgRef.current, {
-        scale: 1.3,
+        scale: 1.15,
       });
 
       gsap.set(overlayRef.current, {
-        opacity: 0.7,
+        opacity: 0.65,
       });
 
       gsap.set(
@@ -40,9 +44,10 @@ export default function Hero() {
         }
       );
 
+      // Animation
       tl.to(bgRef.current, {
         scale: 1,
-        duration: 2.5,
+        duration: 2,
       })
         .to(
           overlayRef.current,
@@ -59,7 +64,7 @@ export default function Hero() {
             y: 0,
             duration: 0.7,
           },
-          0.4
+          0.3
         )
         .to(
           textRef.current,
@@ -68,14 +73,14 @@ export default function Hero() {
             y: 0,
             duration: 0.6,
           },
-          0.55
+          0.45
         )
         .fromTo(
           buttonRef.current,
           {
             opacity: 0,
             y: 20,
-            scale: 0.9,
+            scale: 0.95,
           },
           {
             opacity: 1,
@@ -84,10 +89,14 @@ export default function Hero() {
             duration: 0.5,
             ease: "back.out(1.5)",
           },
-          0.75
+          0.6
         );
     },
-    { scope: heroRef }
+    {
+      scope: heroRef,
+      dependencies: [loaded],
+      revertOnUpdate: true,
+    }
   );
 
   return (
@@ -96,20 +105,27 @@ export default function Hero() {
         ref={heroRef}
         className="relative h-[320px] sm:h-[380px] md:h-[500px] overflow-hidden rounded-3xl bg-black shadow-xl"
       >
+        {/* Background */}
         <img
           ref={bgRef}
           src="/assets/herosection.webp"
           alt="Hero Banner"
           loading="eager"
           fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
+          decoding="async"
+          onLoad={() => setLoaded(true)}
+          className={`absolute inset-0 h-full w-full object-cover will-change-transform transition-opacity duration-300 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
         />
 
+        {/* Overlay */}
         <div
           ref={overlayRef}
           className="absolute inset-0 bg-black"
         />
 
+        {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <h1
             ref={headingRef}
@@ -128,7 +144,7 @@ export default function Hero() {
           <a
             ref={buttonRef}
             href={heroData.buttonLink}
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white md:px-10 md:py-3.5 md:text-base"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white md:px-10 md:text-base"
           >
             {heroData.buttonText}
           </a>
