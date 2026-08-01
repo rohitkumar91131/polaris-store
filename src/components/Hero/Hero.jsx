@@ -3,60 +3,59 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useSelector } from "react-redux";
 
-// Register GSAP plugin
 gsap.registerPlugin(useGSAP);
 
 export default function Hero() {
   const heroRef = useRef();
-  
-  // Pulling Hero data dynamically from Redux store
+
   const heroData = useSelector((state) => state.data.hero);
 
   useGSAP(() => {
-    // Subtle background image zoom effect on load
     gsap.from(".hero-bg", {
       scale: 1.05,
       duration: 2.5,
-      ease: "power2.out"
+      ease: "power2.out",
     });
 
-    // Staggered text and button reveal from the bottom
     gsap.from(".hero-content > *", {
       y: 30,
       opacity: 0,
       duration: 1,
       stagger: 0.15,
       ease: "power3.out",
-      delay: 0.2
+      delay: 0.2,
     });
   }, { scope: heroRef });
 
   return (
-    // Added a container wrapper with padding and max-width to match the screenshot
-    <section className="px-4 md:px-8 py-6 max-w-[1440px] mx-auto">
-      <div 
-        ref={heroRef} 
-        className="relative w-full h-[50vh] md:h-[500px] rounded-xl flex items-center justify-center bg-gray-900 overflow-hidden shadow-sm"
+    <section className="px-4 md:px-8 py-4 md:py-6 max-w-[1440px] mx-auto">
+      <div
+        ref={heroRef}
+        className="relative w-full h-[320px] sm:h-[380px] md:h-[500px] rounded-3xl overflow-hidden flex items-center justify-center bg-gray-900 shadow-lg"
       >
-        <img 
-          src={heroData.backgroundImage} 
-          alt="Hero Banner" 
-          className="hero-bg absolute inset-0 w-full h-full object-cover opacity-60"
+        {/* Background */}
+        <img
+          src={heroData.backgroundImage}
+          alt="Hero Banner"
+          className="hero-bg absolute inset-0 w-full h-full object-cover"
         />
-        
-        {/* Centered text and button layout */}
-        <div className="hero-content relative z-10 px-6 max-w-4xl text-center flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* Content */}
+        <div className="hero-content relative z-10 flex flex-col items-center text-center px-6 max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
             {heroData.heading}
           </h1>
-          
-          <p className="text-lg md:text-xl text-gray-100 mb-8 font-medium drop-shadow-md">
+
+          <p className="mt-4 text-sm sm:text-base md:text-xl text-white/90 max-w-xl leading-relaxed">
             {heroData.subtext}
           </p>
-          
-          <a 
-            href={heroData.buttonLink} 
-            className="inline-block bg-white text-primary px-10 py-3.5 rounded-full font-bold hover:bg-accent hover:text-white transition-colors shadow-lg"
+
+          <a
+            href={heroData.buttonLink}
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 md:px-10 md:py-3.5 text-sm md:text-base font-semibold text-primary shadow-xl transition-all duration-300 hover:bg-accent hover:text-white hover:scale-105"
           >
             {heroData.buttonText}
           </a>
