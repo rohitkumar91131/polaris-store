@@ -1,4 +1,94 @@
 {
+  "navbar": [
+    {
+      "id": 1,
+      "title": "Shop All",
+      "link": "/shop",
+      "subitems": []
+    },
+    {
+      "id": 2,
+      "title": "Tools",
+      "link": "/tools",
+      "subitems": [
+        { "title": "Power Tools", "link": "/tools/power" },
+        { "title": "Hand Tools", "link": "/tools/hand" },
+        { "title": "Tool Storage", "link": "/tools/storage" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Safety Gear",
+      "link": "/safety",
+      "subitems": [
+        { "title": "Helmets & Hard Hats", "link": "/safety/helmets" },
+        { "title": "Protective Eyewear", "link": "/safety/eyewear" },
+        { "title": "Work Gloves", "link": "/safety/gloves" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Apparel",
+      "link": "/apparel",
+      "subitems": [
+        { "title": "Work Boots", "link": "/apparel/boots" },
+        { "title": "High-Visibility", "link": "/apparel/hi-vis" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Brands",
+      "link": "/brands",
+      "subitems": []
+    },
+    {
+      "id": 6,
+      "title": "Clearance",
+      "link": "/clearance",
+      "subitems": []
+    }
+  ],
+  "categories": [
+    { 
+      "id": 1, 
+      "name": "Hand Tools", 
+      "logo": "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?w=150&q=80" 
+    },
+    { 
+      "id": 2, 
+      "name": "Safety Gear", 
+      "logo": "https://images.unsplash.com/photo-1585834241071-807c4bc5bdf2?w=150&q=80" 
+    },
+    { 
+      "id": 3, 
+      "name": "Power Tools", 
+      "logo": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=150&q=80" 
+    },
+    { 
+      "id": 4, 
+      "name": "Workwear", 
+      "logo": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=150&q=80" 
+    }
+  ],
+  "industries": [
+    { 
+      "id": 1, 
+      "name": "Construction", 
+      "image": "https://images.unsplash.com/photo-1508344928928-7157b87de541?w=800&q=80" 
+    },
+    { 
+      "id": 2, 
+      "name": "Manufacturing", 
+      "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" 
+    }
+  ],
+  "promotional": {
+    "heading": "Professional Grade Tools Set",
+    "description": "Upgrade your workspace with our premium selected bundles. Save up to 30% when you buy the complete set.",
+    "buttonText": "Explore Bundles",
+    "buttonLink": "/bundles",
+    "image": "https://images.unsplash.com/photo-1504307651254-35680f356fce?w=1200&q=80"
+  },
   "featuredProducts": [
     { "id": 1, "name": "Premium Leather Work Gloves", "price": 45.99, "image": "https://images.unsplash.com/photo-1634852836003-c0aa5b67d243", "description": "Durable and comfortable.", "rating": 4.8, "badge": "Popular", "variants": ["S", "M", "L"] },
     { "id": 2, "name": "Industrial Safety Helmet", "price": 89.50, "image": "https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc", "description": "High-impact resistance.", "rating": 4.9, "badge": "", "variants": ["Yellow", "White"] },
