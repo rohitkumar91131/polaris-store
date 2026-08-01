@@ -6,7 +6,7 @@ export default function IndustrySection() {
   return (
     <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-8">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-10">
-        Shop By Industry
+        Visit By Industry
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,7 +59,7 @@ export default function IndustrySection() {
                     group-hover:scale-105
                   "
                 >
-                  <span>Shop Now</span>
+                  <span>Visit Now</span>
 
                   <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
                     →
