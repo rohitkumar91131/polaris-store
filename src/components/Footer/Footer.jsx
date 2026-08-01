@@ -6,7 +6,7 @@ export default function Footer() {
         <div>
           <a href="/" className="inline-block mb-4">
             <img
-              src="/assets/logo.webp" // Change extension if needed (logo.webp)
+              src="/assets/images/logo.webp" // Change extension if needed (logo.webp)
               alt="Polaris"
               className="h-12 w-auto object-contain"
             />
