@@ -1,13 +1,16 @@
 import { FiSearch, FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
+import storeData from "../../data/storeData.json";
 
 export default function Header() {
+  const { headerLinks } = storeData;
+
   return (
     <header className="px-4 md:px-8 py-6 flex items-center justify-between bg-white sticky top-0 z-40 shadow-sm">
       
       {/* Logo Section */}
       <a href="/" className="flex-shrink-0 cursor-pointer">
         <img 
-          src="assets/images/logo.png" 
+          src="/assets/images/logo.png" 
           alt="Polaris Global Store Logo" 
           className="h-8 md:h-10 object-contain"
         />
@@ -23,14 +26,20 @@ export default function Header() {
         <FiSearch className="absolute right-4 top-3 text-gray-400" />
       </div>
 
-      {/* Icons */}
+      {/* Dynamic Data-Driven Icons */}
       <div className="flex items-center gap-4 md:gap-6 text-gray-700">
-        <button className="hover:text-accent transition-colors"><FiHeart className="w-6 h-6" /></button>
-        <button className="hover:text-accent transition-colors"><FiUser className="w-6 h-6" /></button>
-        <button className="hover:text-accent transition-colors relative">
+        <a href={headerLinks.wishlist} className="hover:text-accent transition-colors">
+          <FiHeart className="w-6 h-6" />
+        </a>
+        <a href={headerLinks.profile} className="hover:text-accent transition-colors">
+          <FiUser className="w-6 h-6" />
+        </a>
+        <a href={headerLinks.cart} className="hover:text-accent transition-colors relative block">
           <FiShoppingCart className="w-6 h-6" />
-          <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
-        </button>
+          <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            3
+          </span>
+        </a>
       </div>
       
     </header>

@@ -1,4 +1,9 @@
 {
+    "headerLinks": {
+    "wishlist": "/wishlist",
+    "profile": "/account",
+    "cart": "/cart"
+  },
   "navbar": [
     { "id": 1, "title": "Shop All", "link": "/shop", "subitems": [] },
     { "id": 2, "title": "Tools", "link": "/tools", "subitems": [
@@ -39,28 +44,28 @@
       "name": "Hand Tools", 
       "link": "/categories/hand-tools",
       "logo": "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?w=150&q=80",
-      "bgImage": "https://images.unsplash.com/photo-1508873535684-275a50d2bc41?w=600&q=80"
+      "bgImage": "https://media.gettyimages.com/id/166225713/photo/work-tools.jpg?s=612x612&w=0&k=20&c=LvuMTUBM2qBebptTD7Z2qki6c42wXMyovPrPco_lCCQ="
     },
     { 
       "id": 2, 
       "name": "Safety Gear", 
       "link": "/categories/safety-gear",
-      "logo": "https://images.unsplash.com/photo-1585834241071-807c4bc5bdf2?w=150&q=80",
-      "bgImage": "https://images.unsplash.com/photo-1579482811438-fb36639dcc04?w=600&q=80"
+      "logo": "https://media.gettyimages.com/id/2212563380/photo/yellow-hard-hat-protective-glasses-and-earmuffs-in-industrial-setting.jpg?s=612x612&w=0&k=20&c=qm8j5h1w-SIaJluuF-_VlLjbrTLqVEYjE-0yBRAF19g=",
+      "bgImage": "https://media.gettyimages.com/id/470172604/photo/personal-safety-workwear-and-construction-blueprint-shot-directly-above.jpg?s=612x612&w=0&k=20&c=XsR3_2mbw78XETe5sDAv1MSrNTF1OnrvmrkEDo6dEqw="
     },
     { 
       "id": 3, 
       "name": "Power Tools", 
       "link": "/categories/power-tools",
       "logo": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=150&q=80",
-      "bgImage": "https://images.unsplash.com/photo-1581147036324-c1f9c9b5894b?w=600&q=80"
+      "bgImage": "https://media.gettyimages.com/id/2162666018/photo/hand-tools-and-workbench-in-carpentry-workshop.jpg?s=612x612&w=0&k=20&c=l4231Txtb8Bv_CDSNZnRzZKYjKntVKEUtUcKlNwy7C0="
     },
     { 
       "id": 4, 
       "name": "Workwear", 
       "link": "/categories/workwear",
       "logo": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=150&q=80",
-      "bgImage": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80"
+      "bgImage": "hhttps://media.gettyimages.com/id/165829163/photo/personal-protective-workwear-shoot-from-above-on-diamondplate-background.jpg?s=612x612&w=0&k=20&c=Fun7SJYAgNAXCBCnvjiwxGkm83EcYpfHJFDYQt6-A8Y="
     }
   ],
   "industries": [
