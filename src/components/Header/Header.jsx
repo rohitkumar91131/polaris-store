@@ -9,8 +9,16 @@ export default function Header() {
   return (
     <header className="px-4 md:px-8 py-5 flex items-center justify-between bg-white sticky top-0 z-40 shadow-sm">
       
-      {/* Logo & Mobile Menu Section */}
+      {/* Mobile Menu & Logo Section */}
       <div className="flex items-center gap-4">
+        {/* Hamburger Menu - Visible only on mobile, left of the logo */}
+        <button 
+          className="md:hidden text-gray-800 hover:text-accent transition-colors p-1" 
+          onClick={() => dispatch(toggleMobileMenu())}
+        >
+          <FiMenu className="w-7 h-7" />
+        </button>
+
         <a href="/" className="flex-shrink-0 cursor-pointer">
           <img 
             src="/assets/images/logo.png" 
@@ -18,14 +26,6 @@ export default function Header() {
             className="h-8 md:h-10 object-contain"
           />
         </a>
-        
-        {/* Hamburger Menu - Visible only on mobile, right of the logo */}
-        <button 
-          className="md:hidden text-gray-800 hover:text-accent transition-colors p-1" 
-          onClick={() => dispatch(toggleMobileMenu())}
-        >
-          <FiMenu className="w-7 h-7" />
-        </button>
       </div>
       
       {/* Search Bar */}
