@@ -1,73 +1,81 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { useSelector } from "react-redux";
 
-export default function IndustrySection() {
-  const industries = useSelector((state) => state.data.industries);
+gsap.registerPlugin(useGSAP);
+
+export default function Hero() {
+  const heroRef = useRef();
+  const heroData = useSelector((state) => state.data.hero);
+
+  useGSAP(() => {
+    // Background animation
+    gsap.fromTo(
+      ".hero-bg",
+      {
+        scale: 1.08,
+      },
+      {
+        scale: 1,
+        duration: 2,
+        ease: "power2.out",
+        overwrite: "auto",
+      }
+    );
+
+    // Content animation
+    gsap.fromTo(
+      ".hero-content > *",
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        stagger: 0.15,
+        delay: 0.2,
+        ease: "power3.out",
+        overwrite: "auto",
+      }
+    );
+  }, { scope: heroRef });
 
   return (
-    <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto mb-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-10">
-        Shop By Industry
-      </h2>
+    <section className="max-w-[1440px] mx-auto px-4 md:px-8 py-4 md:py-6">
+      <div
+        ref={heroRef}
+        className="relative h-[320px] sm:h-[380px] md:h-[500px] overflow-hidden rounded-3xl bg-gray-900 shadow-xl"
+      >
+        {/* Background */}
+        <img
+          src={heroData.backgroundImage}
+          alt="Hero Banner"
+          className="hero-bg absolute inset-0 h-full w-full object-cover"
+        />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {industries.map((industry) => (
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* Content */}
+        <div className="hero-content relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+          <h1 className="max-w-4xl text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            {heroData.heading}
+          </h1>
+
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base md:text-lg">
+            {heroData.subtext}
+          </p>
+
           <a
-            key={industry.id}
-            href={industry.link}
-            className="group relative block h-72 overflow-hidden rounded-3xl shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
+            href={heroData.buttonLink}
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-white md:px-10 md:py-3.5 md:text-base"
           >
-            {/* Background */}
-            <img
-              src={industry.image}
-              alt={industry.name}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
-
-            {/* Content */}
-            <div className="relative z-10 flex h-full items-end p-6 md:p-8">
-              <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
-                {/* Title */}
-                <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                  {industry.name}
-                </h3>
-
-                {/* Button */}
-                <span
-                  className="
-                    inline-flex
-                    w-fit
-                    items-center
-                    gap-2
-                    rounded-full
-                    border
-                    border-white/20
-                    bg-white/15
-                    backdrop-blur-md
-                    px-5
-                    py-3
-                    text-sm
-                    md:text-base
-                    font-semibold
-                    text-white
-                    shadow-lg
-                    transition-all
-                    duration-300
-                    hover:bg-white/25
-                    hover:scale-105
-                  "
-                >
-                  Shop Now
-                  <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </span>
-              </div>
-            </div>
+            {heroData.buttonText}
           </a>
-        ))}
+        </div>
       </div>
     </section>
   );
