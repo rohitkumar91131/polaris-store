@@ -1,4 +1,4 @@
-import { FiSearch, FiHeart, FiUser, FiShoppingCart, FiMenu } from "react-icons/fi";
+import { FiSearch, FiHeart, FiUser, FiMenu } from "react-icons/fi";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileMenu } from "../../store/slices/uiSlice";
 
@@ -40,19 +40,14 @@ export default function Header() {
 
       {/* Dynamic Data-Driven Icons */}
       <div className="flex items-center gap-4 md:gap-6 text-gray-700">
-        {/* Heart Icon - Hidden on mobile, visible on small+ */}
-        <a href={headerLinks.wishlist} className="hover:text-accent transition-colors hidden sm:block">
+        {/* Heart Icon - Removed 'hidden sm:block' so it is visible on mobile */}
+        <a href={headerLinks.wishlist} className="hover:text-accent transition-colors block">
           <FiHeart className="w-6 h-6" />
         </a>
         
-        {/* User Icon - Hidden on mobile, visible on small+ */}
-        <a href={headerLinks.profile} className="hover:text-accent transition-colors hidden sm:block">
+        {/* User Icon - Removed 'hidden sm:block' so it is visible on mobile */}
+        <a href={headerLinks.profile} className="hover:text-accent transition-colors block">
           <FiUser className="w-6 h-6" />
-        </a>
-
-        {/* Cart Icon - ADDED THIS. Visible on ALL screen sizes */}
-        <a href={headerLinks.cart} className="hover:text-accent transition-colors block">
-          <FiShoppingCart className="w-6 h-6" />
         </a>
       </div>
       
