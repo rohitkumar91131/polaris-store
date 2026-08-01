@@ -72,30 +72,30 @@
   ],
   "categories": [
     { 
-      "id": 1, 
-      "name": "Grid Panels", 
-      "link": "/categories/grid-panels",
+      "id": 424271446249, 
+      "name": "2-Way & 4-Way Clothing Racks", 
+      "link": "/categories/2-way-4-way-clothing-racks",
       "logo": "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?w=150&q=80",
       "bgImage": "https://media.gettyimages.com/id/166225713/photo/work-tools.jpg?s=612x612&w=0&k=20&c=LvuMTUBM2qBebptTD7Z2qki6c42wXMyovPrPco_lCCQ="
     },
     { 
-      "id": 2, 
-      "name": "Garment Care", 
-      "link": "/categories/garment-care",
+      "id": 471015751913, 
+      "name": "2026 Summer Sale", 
+      "link": "/categories/2026-summer-sale",
       "logo": "https://media.gettyimages.com/id/2212563380/photo/yellow-hard-hat-protective-glasses-and-earmuffs-in-industrial-setting.jpg?s=612x612&w=0&k=20&c=qm8j5h1w-SIaJluuF-_VlLjbrTLqVEYjE-0yBRAF19g=",
       "bgImage": "https://media.gettyimages.com/id/470172604/photo/personal-safety-workwear-and-construction-blueprint-shot-directly-above.jpg?s=612x612&w=0&k=20&c=XsR3_2mbw78XETe5sDAv1MSrNTF1OnrvmrkEDo6dEqw="
     },
     { 
-      "id": 3, 
-      "name": "Store Supplies", 
-      "link": "/categories/store-supplies",
+      "id": 424275476713, 
+      "name": "Abstract Mannequins", 
+      "link": "/categories/abstract-mannequins",
       "logo": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=150&q=80",
       "bgImage": "https://media.gettyimages.com/id/2162666018/photo/hand-tools-and-workbench-in-carpentry-workshop.jpg?s=612x612&w=0&k=20&c=l4231Txtb8Bv_CDSNZnRzZKYjKntVKEUtUcKlNwy7C0="
     },
     { 
-      "id": 4, 
-      "name": "Packaging", 
-      "link": "/categories/packaging",
+      "id": 424271839465, 
+      "name": "Accessory & Specialty Displays", 
+      "link": "/categories/accessory-specialty-displays",
       "logo": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=150&q=80",
       "bgImage": "https://media.gettyimages.com/id/1917054502/photo/labourers-planning-on-site.jpg?s=612x612&w=0&k=20&c=okPP0LK9r7HsLEjeC0VAdLLbxAvrHlgsyFqtmyHFwk8="
     }
