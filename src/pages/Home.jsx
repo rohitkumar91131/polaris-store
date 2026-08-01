@@ -10,9 +10,7 @@ import PromoBanner from "../components/PromoBanner/PromoBanner";
 import Features from "../components/Features/Features";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
-
-// Import the single source of truth data
-import storeData from "../data/storeData.json";
+import QuickShopModal from "../components/QuickShopModal/QuickShopModal";
 
 export default function Home() {
   return (
@@ -25,21 +23,26 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         
-        <CategorySection categories={storeData.categories} />
-        <IndustrySection industries={storeData.industries} />
+        {/* No props needed! Components fetch their own data via Redux */}
+        <CategorySection />
+        <IndustrySection />
         
-        <ProductSection title="Featured Products" products={storeData.featuredProducts} />
+        {/* Pass ONLY the string key, the component fetches the actual array */}
+        <ProductSection title="Featured Products" dataKey="featuredProducts" />
         
-        <PromoBanner promoData={storeData.promotional} />
+        <PromoBanner />
         
-        <ProductSection title="New Arrivals" products={storeData.newArrivals} />
-        <ProductSection title="Best Sellers" products={storeData.bestSellers} />
+        <ProductSection title="New Arrivals" dataKey="newArrivals" />
+        <ProductSection title="Best Sellers" dataKey="bestSellers" />
         
         <Features />
         <Newsletter />
       </main>
       
       <Footer />
+      
+      {/* Global Modal mounted at the root level */}
+      <QuickShopModal />
     </div>
   );
 }

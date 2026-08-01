@@ -4,6 +4,13 @@
     "profile": "/account",
     "cart": "/cart"
   },
+  "hero": {
+    "heading": "Equip Your Business with Global Standards",
+    "subtext": "Premium tools, safety gear, and supplies for professionals worldwide. Built for durability, designed for excellence.",
+    "buttonText": "Shop the Collection",
+    "buttonLink": "/shop",
+    "backgroundImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80"
+  },
   "navbar": [
     { "id": 1, "title": "Shop All", "link": "/shop", "subitems": [] },
     { "id": 2, "title": "Tools", "link": "/tools", "subitems": [
@@ -65,7 +72,7 @@
       "name": "Workwear", 
       "link": "/categories/workwear",
       "logo": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=150&q=80",
-      "bgImage": "hhttps://media.gettyimages.com/id/165829163/photo/personal-protective-workwear-shoot-from-above-on-diamondplate-background.jpg?s=612x612&w=0&k=20&c=Fun7SJYAgNAXCBCnvjiwxGkm83EcYpfHJFDYQt6-A8Y="
+      "bgImage": "https://media.gettyimages.com/id/1917054502/photo/labourers-planning-on-site.jpg?s=612x612&w=0&k=20&c=okPP0LK9r7HsLEjeC0VAdLLbxAvrHlgsyFqtmyHFwk8="
     }
   ],
   "industries": [

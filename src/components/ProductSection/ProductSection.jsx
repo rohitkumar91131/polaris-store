@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard/ProductCard";
 
-export default function ProductSection({ title, products }) {
+export default function ProductSection({ title, dataKey }) {
+  // Directly pull the specific array from Redux state
+  const products = useSelector((state) => state.data[dataKey]);
+
   return (
     <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="flex justify-between items-end mb-8">
