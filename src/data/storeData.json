@@ -1,84 +1,117 @@
 {
-  "headerLinks": {
+    "headerLinks": {
     "wishlist": "/wishlist",
     "profile": "/account",
     "cart": "/cart"
   },
   "hero": {
-    "heading": "Professional Retail Displays & Supplies",
-    "subtext": "Premium fixtures, display solutions, and industrial essentials for retail and warehouse operations.",
-    "buttonText": "View New Arrivals",
+    "heading": "Equip Your Business with Global Standards",
+    "subtext": "Premium tools, safety gear, and supplies for professionals worldwide. Built for durability, designed for excellence.",
+    "buttonText": "Visit the Collection",
     "buttonLink": "/shop",
     "backgroundImage": "/assets/herosection.webp"
   },
   "navbar": [
     { "id": 1, "title": "Shop All", "link": "/shop", "subitems": [] },
-    { "id": 2, "title": "Display Fixtures", "link": "/fixtures", "subitems": [
-      { "title": "Grid Panels & Units", "link": "/fixtures/grid" },
-      { "title": "Counter Spinners", "link": "/fixtures/spinners" },
-      { "title": "Sign Holders", "link": "/fixtures/sign-holders" }
+    { "id": 2, "title": "Tools", "link": "/tools", "subitems": [
+      { "title": "Cordless Power Tools", "link": "/tools/cordless" },
+      { "title": "Precision Hand Tools", "link": "/tools/hand" },
+      { "title": "Pneumatic & Air Tools", "link": "/tools/pneumatic" },
+      { "title": "Welding & Soldering", "link": "/tools/welding" },
+      { "title": "Heavy-Duty Storage", "link": "/tools/storage" }
     ]},
-    { "id": 3, "title": "Packaging & Care", "link": "/packaging", "subitems": [
-      { "title": "Garment Bags", "link": "/packaging/garment-bags" },
-      { "title": "Ribbons & Bows", "link": "/packaging/ribbons" },
-      { "title": "Garbage Bags", "link": "/packaging/liners" },
-      { "title": "Garment Steamers", "link": "/packaging/steamers" }
+    { "id": 3, "title": "Safety & PPE", "link": "/safety", "subitems": [
+      { "title": "Head & Face Protection", "link": "/safety/head" },
+      { "title": "High-Impact Eyewear", "link": "/safety/eyewear" },
+      { "title": "Tactical & Cut-Resistant Gloves", "link": "/safety/gloves" },
+      { "title": "Respiratory Safety", "link": "/safety/respiratory" },
+      { "title": "Fall Protection Harnesses", "link": "/safety/fall-protection" }
     ]},
-    { "id": 4, "title": "Clearance", "link": "/clearance", "subitems": [
-      { "title": "Shelving Units", "link": "/clearance/shelving" },
-      { "title": "Bulk Discounts", "link": "/clearance/bulk" }
+    { "id": 4, "title": "Workwear", "link": "/apparel", "subitems": [
+      { "title": "Industrial Steel-Toe Footwear", "link": "/apparel/boots" },
+      { "title": "Flame-Resistant (FR) Clothing", "link": "/apparel/fr-clothing" },
+      { "title": "High-Visibility Outerwear", "link": "/apparel/hi-vis" },
+      { "title": "Weather-Proof Jackets", "link": "/apparel/jackets" }
+    ]},
+    { "id": 5, "title": "Top Brands", "link": "/brands", "subitems": [
+      { "title": "Milwaukee", "link": "/brands/milwaukee" },
+      { "title": "DeWalt", "link": "/brands/dewalt" },
+      { "title": "Makita", "link": "/brands/makita" },
+      { "title": "3M Safety", "link": "/brands/3m" }
+    ]},
+    { "id": 6, "title": "Clearance", "link": "/clearance", "subitems": [
+      { "title": "End of Season Sale", "link": "/clearance/season-sale" },
+      { "title": "Refurbished Equipment", "link": "/clearance/refurbished" },
+      { "title": "Bulk Discount Offers", "link": "/clearance/bulk" }
     ]}
   ],
   "categories": [
     { 
       "id": 1, 
-      "name": "Store Fixtures", 
-      "link": "/categories/fixtures",
-      "logo": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/181011w6.png?v=1719315354",
+      "name": "Hand Tools", 
+      "link": "/categories/hand-tools",
+      "logo": "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?w=150&q=80",
       "bgImage": "https://media.gettyimages.com/id/166225713/photo/work-tools.jpg?s=612x612&w=0&k=20&c=LvuMTUBM2qBebptTD7Z2qki6c42wXMyovPrPco_lCCQ="
     },
     { 
       "id": 2, 
-      "name": "Packaging", 
-      "link": "/categories/packaging",
-      "logo": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/garment_bags2018_1.png?v=1702400259",
+      "name": "Safety Gear", 
+      "link": "/categories/safety-gear",
+      "logo": "https://media.gettyimages.com/id/2212563380/photo/yellow-hard-hat-protective-glasses-and-earmuffs-in-industrial-setting.jpg?s=612x612&w=0&k=20&c=qm8j5h1w-SIaJluuF-_VlLjbrTLqVEYjE-0yBRAF19g=",
       "bgImage": "https://media.gettyimages.com/id/470172604/photo/personal-safety-workwear-and-construction-blueprint-shot-directly-above.jpg?s=612x612&w=0&k=20&c=XsR3_2mbw78XETe5sDAv1MSrNTF1OnrvmrkEDo6dEqw="
     },
     { 
       "id": 3, 
-      "name": "Warehouse Supplies", 
-      "link": "/categories/warehouse",
-      "logo": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/233100_2026.jpg?v=1771023468",
+      "name": "Power Tools", 
+      "link": "/categories/power-tools",
+      "logo": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=150&q=80",
       "bgImage": "https://media.gettyimages.com/id/2162666018/photo/hand-tools-and-workbench-in-carpentry-workshop.jpg?s=612x612&w=0&k=20&c=l4231Txtb8Bv_CDSNZnRzZKYjKntVKEUtUcKlNwy7C0="
+    },
+    { 
+      "id": 4, 
+      "name": "Workwear", 
+      "link": "/categories/workwear",
+      "logo": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=150&q=80",
+      "bgImage": "https://media.gettyimages.com/id/1917054502/photo/labourers-planning-on-site.jpg?s=612x612&w=0&k=20&c=okPP0LK9r7HsLEjeC0VAdLLbxAvrHlgsyFqtmyHFwk8="
     }
   ],
   "industries": [
     { 
       "id": 1, 
-      "name": "Retail & Boutique", 
-      "link": "/industry/retail",
-      "image": "https://media.gettyimages.com/id/1394287688/photo/carpenter-shopping-in-hardware-store.jpg?s=612x612&w=0&k=20&c=2REACyiwXzjiTOe3J_rg4Ek6DHhq6f-bLvMnWkvHfeA=" 
+      "name": "Construction", 
+      "link": "/industry/construction",
+      "image": "https://media.gettyimages.com/id/1042342584/photo/investors-and-contractors-on-construction-site.jpg?s=612x612&w=0&k=20&c=dfpqU0nr9BccCHOdHNyI1UanHGLt1nD2t6jZp95YUe4=" 
     },
     { 
       "id": 2, 
-      "name": "Facility Management", 
-      "link": "/industry/facility",
+      "name": "Manufacturing", 
+      "link": "/industry/manufacturing",
       "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" 
     }
   ],
+  "promotional": {
+    "heading": "Professional Grade Tools Set",
+    "description": "Upgrade your workspace with our premium selected bundles. Save up to 30% when you buy the complete set.",
+    "buttonText": "Explore Bundles",
+    "buttonLink": "/bundles",
+    "image": "https://media.gettyimages.com/id/1394287688/photo/carpenter-shopping-in-hardware-store.jpg?s=612x612&w=0&k=20&c=2REACyiwXzjiTOe3J_rg4Ek6DHhq6f-bLvMnWkvHfeA="
+  },
   "featuredProducts": [
-    { "id": 9344304808169, "name": "2' Shelving Unit (VersaMax)", "price": 224.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/PewterShelf_2026.jpg?v=1784049416", "description": "Versatile pewter shelving unit for storage.", "rating": 4.9, "badge": "Sale", "variants": ["Default"] },
-    { "id": 9352626700521, "name": "Jiffy J2 Rod Set", "price": 63.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/199510.png?v=1784775499", "description": "Rod set for garment steamers.", "rating": 4.8, "badge": "", "variants": ["Default"] },
-    { "id": 8275295961321, "name": "Outdoor A-Frame Sign Holder", "price": 79.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/130413_app.jpg?v=1702577748", "description": "Durable molded plastic sign holder.", "rating": 4.7, "badge": "", "variants": ["Default"] }
+    { "id": 1, "name": "Premium Leather Work Gloves", "price": 45.99, "image": "https://images.unsplash.com/photo-1634852836003-c0aa5b67d243?w=500&q=80", "description": "Durable and comfortable high-grade leather gloves for heavy lifting.", "rating": 4.8, "badge": "Popular", "variants": ["S", "M", "L"] },
+    { "id": 2, "name": "Industrial Safety Helmet", "price": 89.50, "image": "https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc?w=500&q=80", "description": "High-impact resistance helmet built for extreme environments.", "rating": 4.9, "badge": "", "variants": ["Yellow", "White"] },
+    { "id": 3, "name": "Heavy Duty Tool Belt", "price": 65.00, "image": "https://images.unsplash.com/photo-1765518440022-10242cc86895?w=500&q=80", "description": "12 functional pockets to keep your core tools right at your waist.", "rating": 4.7, "badge": "Sale", "variants": ["One Size"] },
+    { "id": 4, "name": "Steel Toe Work Boots", "price": 120.00, "image": "https://images.unsplash.com/photo-1509099074304-74309ab2af3d?w=500&q=80", "description": "All-day comfort with heavy-duty toe protection.", "rating": 5.0, "badge": "", "variants": ["9", "10", "11", "12"] }
   ],
   "newArrivals": [
-    { "id": 9352589082857, "name": "12 Arm Counter Spinner", "price": 16.20, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/167048_2026.png?v=1784761257", "description": "Rotating metal accessory display.", "rating": 4.5, "badge": "New", "variants": ["Default"] },
-    { "id": 9315690774761, "name": "Satin Curling Ribbon", "price": 2.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/curling_ribbon_2026.jpg?v=1781731146", "description": "400 Metre Roll, various colors.", "rating": 4.6, "badge": "New", "variants": ["13 Colors"] },
-    { "id": 9271447191785, "name": "Small Grabber Hooks", "price": 19.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/140198_2026.png?v=1777930589", "description": "100 Pack, Black.", "rating": 4.8, "badge": "New", "variants": ["Default"] }
+    { "id": 5, "name": "High-Visibility Vest", "price": 25.00, "image": "https://images.unsplash.com/photo-1762511879587-f15dcfba4351?w=500&q=80", "description": "Reflective stripes for maximum visibility on night sites.", "rating": 4.5, "badge": "New", "variants": ["M", "L", "XL"] },
+    { "id": 6, "name": "Protective Eyewear", "price": 18.99, "image": "https://images.unsplash.com/photo-1708799366365-a24608103bed?w=500&q=80", "description": "Anti-fog, anti-scratch lenses for clear vision.", "rating": 4.6, "badge": "New", "variants": ["Clear", "Tinted"] },
+    { "id": 7, "name": "Cordless Power Drill", "price": 199.99, "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500&q=80", "description": "20V max lithium-ion precision drill.", "rating": 4.9, "badge": "New", "variants": ["Base Kit", "Pro Kit"] },
+    { "id": 8, "name": "Industrial Ear Muffs", "price": 32.00, "image": "https://images.unsplash.com/photo-1677019758448-4c34a78df2c3?w=500&q=80", "description": "Maximum noise cancellation for loud environments.", "rating": 4.7, "badge": "New", "variants": ["Black", "Yellow"] }
   ],
   "bestSellers": [
-    { "id": 8275295404265, "name": "Heavy Duty Garbage Bags", "price": 33.50, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/233100_2026.jpg?v=1771023468", "description": "EcoLogo certified black liners.", "rating": 4.9, "badge": "Best Seller", "variants": ["5 Sizes"] },
-    { "id": 8273408688361, "name": "Zipper Garment Bags", "price": 2.90, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/garment_bags2018_1.png?v=1702400259", "description": "Protective bags with clear window.", "rating": 4.8, "badge": "Best Seller", "variants": ["Multiple"] },
-    { "id": 9272770003177, "name": "Grid Panel with Legs", "price": 71.70, "image": "https://cdn.shopify.com/s/files/1/0669/9676/4905/files/181011w6.png?v=1719315354", "description": "Portable display unit.", "rating": 4.7, "badge": "Best Seller", "variants": ["Multiple"] }
+    { "id": 9, "name": "Measuring Tape Pro", "price": 15.50, "image": "https://images.unsplash.com/photo-1689446802635-6c61ad0cc1d0?w=500&q=80", "description": "25ft heavy duty tape with magnetic hook.", "rating": 4.8, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 10, "name": "Multi-bit Screwdriver", "price": 22.00, "image": "https://images.unsplash.com/photo-1581621293775-7aac902d7032?w=500&q=80", "description": "11-in-1 tool with hardened steel bits.", "rating": 4.9, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 11, "name": "Utility Knife", "price": 12.99, "image": "https://images.unsplash.com/photo-1713114344703-bf4fb0be30bd?w=500&q=80", "description": "Quick-change retractable blade mechanism.", "rating": 4.6, "badge": "Best Seller", "variants": ["Standard"] },
+    { "id": 12, "name": "Canvas Tool Bag", "price": 45.00, "image": "https://images.unsplash.com/photo-1528976915572-6a0cf746802e?w=500&q=80", "description": "Water-resistant thick canvas for rough handling.", "rating": 4.8, "badge": "Best Seller", "variants": ["Khaki", "Black"] }
   ]
 }
