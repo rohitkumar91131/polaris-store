@@ -21,7 +21,7 @@ export default function Header() {
 
         <a href="/" className="flex-shrink-0 cursor-pointer">
           <img 
-            src="/assets/images/logo.png" 
+            src="/assets/images/logo.webp" 
             alt="Polaris Global Store Logo" 
             className="h-8 md:h-10 object-contain"
           />
