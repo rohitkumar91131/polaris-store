@@ -1,8 +1,8 @@
 {
   "headerLinks": {
     "wishlist": "/wishlist",
-    "profile": "/account",
-    "cart": "/cart"
+    "profile": "/account"
+    
   },
   "hero": {
     "heading": "Equip Your Store with Premium Fixtures",

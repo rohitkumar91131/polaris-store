@@ -46,6 +46,12 @@ export default function Header() {
         <a href={headerLinks.profile} className="hover:text-accent transition-colors hidden sm:block">
           <FiUser className="w-6 h-6" />
         </a>
+        <a href={headerLinks.cart} className="hover:text-accent transition-colors relative block">
+          <FiShoppingCart className="w-6 h-6" />
+          <span className="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+            3
+          </span>
+        </a>
       </div>
       
     </header>
