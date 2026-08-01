@@ -4,7 +4,11 @@ export default function IndustrySection({ industries }) {
       <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-10">Shop By Industry</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {industries.map((industry) => (
-          <div key={industry.id} className="h-72 bg-gray-900 rounded-2xl relative overflow-hidden flex items-end p-8 group cursor-pointer shadow-md hover:shadow-2xl transition-shadow">
+          <a 
+            href={industry.link}
+            key={industry.id} 
+            className="block h-72 bg-gray-900 rounded-2xl relative overflow-hidden flex items-end p-8 group cursor-pointer shadow-md hover:shadow-2xl transition-shadow"
+          >
             <img 
               src={industry.image} 
               alt={industry.name} 
@@ -12,11 +16,11 @@ export default function IndustrySection({ industries }) {
             />
             <div className="relative z-10 w-full flex justify-between items-end">
               <h3 className="text-white text-3xl font-bold drop-shadow-md">{industry.name}</h3>
-              <button className="bg-accent text-white px-6 py-2 rounded-full font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span className="bg-accent text-white px-6 py-2 rounded-full font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 Shop Now
-              </button>
+              </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
