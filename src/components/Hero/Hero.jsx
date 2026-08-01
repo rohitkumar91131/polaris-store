@@ -6,42 +6,53 @@ import { useSelector } from "react-redux";
 gsap.registerPlugin(useGSAP);
 
 export default function Hero() {
-  const heroRef = useRef();
-  const bgRef = useRef();
-  const contentRef = useRef();
+  const heroRef = useRef(null);
+  const bgRef = useRef(null);
+  const contentRef = useRef(null);
 
-  const [loaded, setLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const heroData = useSelector((state) => state.data.hero);
 
   useGSAP(
     () => {
-      if (!loaded) return;
+      if (!imageLoaded) return;
 
-      const tl = gsap.timeline();
+      const ctx = gsap.context(() => {
+        gsap.set(bgRef.current, {
+          scale: 1.1,
+        });
 
-      tl.from(bgRef.current, {
-        scale: 1.15,
-        duration: 2,
-        ease: "power3.out",
-      });
+        gsap.set(contentRef.current.children, {
+          autoAlpha: 0,
+          y: 40,
+        });
 
-      tl.from(
-        contentRef.current.children,
-        {
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-        },
-        "-=1.5"
-      );
+        const tl = gsap.timeline({
+          defaults: {
+            ease: "power3.out",
+          },
+        });
+
+        tl.to(bgRef.current, {
+          scale: 1,
+          duration: 2,
+        }).to(
+          contentRef.current.children,
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15,
+          },
+          "-=1.4"
+        );
+      }, heroRef);
+
+      return () => ctx.revert();
     },
     {
-      scope: heroRef,
-      dependencies: [loaded],
-      revertOnUpdate: true,
+      dependencies: [imageLoaded],
     }
   );
 
@@ -51,19 +62,18 @@ export default function Hero() {
         ref={heroRef}
         className="relative h-[320px] sm:h-[380px] md:h-[500px] overflow-hidden rounded-3xl bg-gray-900 shadow-xl"
       >
-        {/* Background */}
         <img
           ref={bgRef}
           src={heroData?.backgroundImage}
           alt="Hero Banner"
-          onLoad={() => setLoaded(true)}
-          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          onLoad={() => setImageLoaded(true)}
+          className="absolute inset-0 h-full w-full object-cover will-change-transform"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/45" />
 
-        {/* Content */}
         <div
           ref={contentRef}
           className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
